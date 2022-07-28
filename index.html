@@ -2,230 +2,312 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
 		<title>Alura Geek</title>
-        <link rel="stylesheet" href="./styles/reset.css">
-		<link rel="stylesheet" href="./styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/base.css">
+        <link rel="stylesheet" href="./styles/header.css">
+		<link rel="stylesheet" href="./styles/banner.css">
+		<link rel="stylesheet" href="./styles/products-home.css">
+		<link rel="stylesheet" href="./styles/contact-us.css">
+		<link rel="stylesheet" href="./styles/footer.css">
 	</head>
 	<body>
 		<header>
-			<div class="search_bar_login_container">
-                <img class="logo" src="./images/Logo.png" alt="Alura Geek">
-                <div class="search_bar_wrapper">
-                    <form>
-                        <input class="search_bar" type="text" placeholder="O que deseja encontrar?"/>
-                        <button><img src="./images/mag_glass.svg"></button>
-                    </form>
-                </div>
-                <button class="login_buttom">Login</button>
-            </div>
-            <div class="banner">
-                <img class="banner_img" src="./images/banner-image.png" alt="Dezembro Promocional">
-                <div class="banner_content_container">
-                    <div class="banner_content_wrapper">
-                        <h1>Dezembro Promocional</h1>
-                        <p>Produtos selecionados com 33% de desconto</p>
-                        <button>Ver Consoles</button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <section id="products">
-            
-            <div class="line_products">
-                <div class="header_line_products">
-                    <h2 class="products_cat_name">Star Wars</h2>
-                    <div class="see_all_products_wrapper">
-                        <a class="see_all_products" href="#">Ver Tudo</a>
-                        <img class="see_all_products_arrow" src="./images/products_imgs/r_arrow.svg">
-                    </div>        
-                </div>
-                <div class="products_wrapper">
+			<div class="container header__top">
+				<img src="./images/logo.svg" alt="Alura Geek" class="header__logo">
+				
+				<div class="header__right-elements-container">
+					<a class="button button__white login__button" href="./login.html">Login</a>
+					<div class="search__bar-wrapper">
+						<div class="search__bar-background"></div>
+						<form action="">
+							<input type="text" class="search__bar" placeholder="O que deseja encontrar?">
+							<button class="search__button"><img src="./images/mag_glass.svg" alt="Busque um produto"></button>
+						</form>
+					</div>
+				</div>
+				
+			</div>
+			<div class="banner__container">
+				<figure>
+					<img src="./images/banner-image2.png" alt="Dezembro Promocional" class="banner__image">
+					<div class="container banner__content-wrapper">
+						<figcaption>
+							<h1 class="banner__title">Dezembro Promocional</h1>
+							<p class="banner__text">Produtos selecionados com 33% de desconto</p>
+						</figcaption>
+						<a href="#" class="button button__blue button__banner">Ver Consoles</a>
+					</div>
+				</figure>
+			</div>
+		</header>
+		<section class="products__home">
+			<div class="container products__category">
+				<div class="products__category-header">
+					<p class="products__category-name">Star Wars</p>
+					<div class="see__more-products-wrapper">
+						<a href="#" class="see__more-products">Ver tudo</a>
+						<img src="./images/arrow.svg">
+					</div>
+				</div>
+				<div class="products">
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_6FDXGY9J6y4.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Produto XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                    <div class="card_product">
-                        <img class="product_img" src="./images/products_imgs/unsplash_6FDXGY9J6y4.png">
-                        <p class="product_name">Produto YXZ</p>
-                        <p class="product_price">R$ 60,00</p>
-                        <a class="see_product" href="#">Ver Produto</a>
-                    </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_epRFE_hBNjo.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Produto XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                    <div class="card_product">
-                        <img class="product_img" src="./images/products_imgs/unsplash_epRFE_hBNjo.png">
-                        <p class="product_name">Produto YXZ</p>
-                        <p class="product_price">R$ 60,00</p>
-                        <a class="see_product" href="#">Ver Produto</a>
-                    </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_KeGToDVN0l4.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Produto XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                    <div class="card_product">
-                        <img class="product_img" src="./images/products_imgs/unsplash_KeGToDVN0l4.png">
-                        <p class="product_name">Produto YXZ</p>
-                        <p class="product_price">R$ 60,00</p>
-                        <a class="see_product" href="#">Ver Produto</a>
-                    </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_4OHkK555s1A.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Produto XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                    <div class="card_product">
-                        <img class="product_img" src="./images/products_imgs/unsplash_4OHkK555s1A.png">
-                        <p class="product_name">Produto YXZ</p>
-                        <p class="product_price">R$ 60,00</p>
-                        <a class="see_product" href="#">Ver Produto</a>
-                    </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_R8L1l9RN198.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Produto XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                    <div class="card_product">
-                        <img class="product_img" src="./images/products_imgs/unsplash_R8L1l9RN198.png">
-                        <p class="product_name">Produto YXZ</p>
-                        <p class="product_price">R$ 60,00</p>
-                        <a class="see_product" href="#">Ver Produto</a>
-                    </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_1VV1MRafd7A.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Produto XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
 
-                    <div class="card_product">
-                        <img class="product_img" src="./images/products_imgs/unsplash_1VV1MRafd7A.png">
-                        <p class="product_name">Produto YXZ</p>
-                        <p class="product_price">R$ 60,00</p>
-                        <a class="see_product" href="#">Ver Produto</a>
-                    </div>
+			<div class="container products__category">
+				<div class="products__category-header">
+					<p class="products__category-name">Console</p>
+					<div class="see__more-products-wrapper">
+						<a href="#" class="see__more-products">Ver tudo</a>
+						<img src="./images/arrow.svg">
+					</div>
+				</div>
+				<div class="products">
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_0POwK6iAiRQ.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Controle XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_caNzzoxls8Q.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Controle e console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                <div class="line_products">
-                    <div class="header_line_products">
-                        <h2 class="products_cat_name">Consoles</h2>
-                        <div class="see_all_products_wrapper">
-                            <a class="see_all_products" href="#">Ver Tudo</a>
-                            <img class="see_all_products_arrow" src="./images/products_imgs/r_arrow.svg">
-                        </div>        
-                    </div>
-                    <div class="products_wrapper">
-    
-                        <div class="card_product">
-                            <img class="product_img" src="./images/products_imgs/unsplash_0POwK6iAiRQ.png">
-                            <p class="product_name">Console XYZ</p>
-                            <p class="product_price">R$ 60,00</p>
-                            <a class="see_product" href="#">Ver Produto</a>
-                        </div>
-    
-                        <div class="card_product">
-                            <img class="product_img" src="./images/products_imgs/unsplash_caNzzoxls8Q.png">
-                            <p class="product_name">Controle e console YXZ</p>
-                            <p class="product_price">R$ 60,00</p>
-                            <a class="see_product" href="#">Ver Produto</a>
-                        </div>
-    
-                        <div class="card_product">
-                            <img class="product_img" src="./images/products_imgs/unsplash_ZV7lnfyQLmA.png">
-                            <p class="product_name">Console XYZ</p>
-                            <p class="product_price">R$ 60,00</p>
-                            <a class="see_product" href="#">Ver Produto</a>
-                        </div>
-    
-                        <div class="card_product">
-                            <img class="product_img" src="./images/products_imgs/unsplash_wa5z9o9fgjw.png">
-                            <p class="product_name">Controle XYZ</p>
-                            <p class="product_price">R$ 60,00</p>
-                            <a class="see_product" href="#">Ver Produto</a>
-                        </div>
-    
-                        <div class="card_product">
-                            <img class="product_img" src="./images/products_imgs/unsplash_Zjn4dT993-g.png">
-                            <p class="product_name">Console XYZ</p>
-                            <p class="product_price">R$ 60,00</p>
-                            <a class="see_product" href="#">Ver Produto</a>
-                        </div>
-    
-                        <div class="card_product">
-                            <img class="product_img" src="./images/products_imgs/unsplash_k-xYhI3-gJM.png">
-                            <p class="product_name">Game Boy Color</p>
-                            <p class="product_price">R$ 60,00</p>
-                            <a class="see_product" href="#">Ver Produto</a>
-                        </div>
-    
-                    </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_ZV7lnfyQLmA.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-                    <div class="line_products">
-                        <div class="header_line_products">
-                            <h2 class="products_cat_name">Diversos</h2>
-                            <div class="see_all_products_wrapper">
-                                <a class="see_all_products" href="#">Ver Tudo</a>
-                                <img class="see_all_products_arrow" src="./images/products_imgs/r_arrow.svg">
-                            </div>        
-                        </div>
-                        <div class="products_wrapper">
-        
-                            <div class="card_product">
-                                <img class="product_img" src="./images/products_imgs/unsplash_fMP-oCze3AY.png">
-                                <p class="product_name">Camisa Atari</p>
-                                <p class="product_price">R$ 60,00</p>
-                                <a class="see_product" href="#">Ver Produto</a>
-                            </div>
-        
-                            <div class="card_product">
-                                <img class="product_img" src="./images/products_imgs/unsplash_bUgaIaZysH0.png">
-                                <p class="product_name">Camisa SNES</p>
-                                <p class="product_price">R$ 60,00</p>
-                                <a class="see_product" href="#">Ver Produto</a>
-                            </div>
-        
-                            <div class="card_product">
-                                <img class="product_img" src="./images/products_imgs/unsplash_sYVY_ZKwaxU.png">
-                                <p class="product_name">Controle e console XYZ</p>
-                                <p class="product_price">R$ 60,00</p>
-                                <a class="see_product" href="#">Ver Produto</a>
-                            </div>
-        
-                            <div class="card_product">
-                                <img class="product_img" src="./images/products_imgs/unsplash_jMT6BrgBuXU.png">
-                                <p class="product_name">Controle e console XYZ</p>
-                                <p class="product_price">R$ 60,00</p>
-                                <a class="see_product" href="#">Ver Produto</a>
-                            </div>
-        
-                            <div class="card_product">
-                                <img class="product_img" src="./images/products_imgs/unsplash_MxVkWPiJALs.png">
-                                <p class="product_name">Controle e console XYZ</p>
-                                <p class="product_price">R$ 60,00</p>
-                                <a class="see_product" href="#">Ver Produto</a>
-                            </div>
-        
-                            <div class="card_product">
-                                <img class="product_img" src="./images/products_imgs/unsplash_r27umXAelDc.png">
-                                <p class="product_name">Controle e console XYZ</p>
-                                <p class="product_price">R$ 60,00</p>
-                                <a class="see_product" href="#">Ver Produto</a>
-                            </div>
-        
-                        </div>
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_caNzzoxls8Q.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
 
-            </div>
-        </section>
-		<footer class="footer_container">          
-            <div class="footer_links">
-                <div class="footer_links_wrapper">
-                    <div><img class="logo" src="./images/Logo.png" alt="Alura Geek"></div>
-                    <ul>
-                        <li><a href="#">Quem somos nós</a></li>
-                        <li><a href="#">Política de privacidade</a></li>
-                        <li><a href="#">Programa de fidelidade</a></li>
-                        <li><a href="#">Nossas lojas</a></li>
-                        <li><a href="#">Quero ser franqueado</a></li>
-                        <li><a href="#">Anuncie aqui</a></li>
-                    </ul>
-                    <div class="contact_wrapper">
-                        <p class="contact_us">Fale conosco</p>
-                        <form>
-                            <div class="contact_input_name_wrapper">
-                                <p>Nome</p><input>
-                            </div>
-                            <div class="contact_input_message_wrapper">
-                                <p>Mensagem</p><textarea class="contact_message"></textarea>
-                            </div>
-                            <button class="send_message_button">Enviar mensagem</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="developer">
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_Zjn4dT993-g.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_k-xYhI3-gJM.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+
+			<div class="container products__category">
+				<div class="products__category-header">
+					<p class="products__category-name">Diversos</p>
+					<div class="see__more-products-wrapper">
+						<a href="#" class="see__more-products">Ver tudo</a>
+						<img src="./images/arrow.svg">
+					</div>
+				</div>
+				<div class="products">
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_fMP-oCze3AY.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Camisa Atari</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_bUgaIaZysH0.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Camisa NES</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_sYVY_ZKwaxU.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Controle e console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_jMT6BrgBuXU.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Controle e console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_MxVkWPiJALs.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Controle e console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="product">
+						<figure>
+							<img src="./images/products_imgs/unsplash_r27umXAelDc.png" alt="Imagem do Produto XYZ" class="product__image">
+							<figcaption class="product__informations">
+								<p class="product__description">Controle e console XYZ</p>
+								<p class="product__price">R$ 60,00</p>
+								<a href="./product.html" class="see__product">Ver produto</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container contact__us">
+			<div class="contact__us-links">
+				<img src="./images/logo.svg" alt="Alura Geek" class="contact__us-logo">
+				<ul>
+					<li><a href="#">Quem somos nós</a></li>
+					<li><a href="#">Política de privacidade</a></li>
+					<li><a href="#">Programa fidelidade</a></li>
+					<li><a href="#">Nossas lojas</a></li>
+					<li><a href="#">Quero ser franqueado</a></li>
+					<li><a href="#">Anuncie aqui</a></li>
+				</ul>
+			</div>
+			<div class="contact__us-form">
+				<p class="contact__us-title">Fale conosco</p>
+				<form action="">
+					<div class="text__box contact__us-name-wrapper">
+						<p>Nome</p>
+						<input type="text">
+					</div>
+					<div class="text__box contact__us-message-wrapper">
+						<p>Escreva sua mensagem</p>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</div>
+					<button class="button button__blue button__contact">Enviar Mensagem</button>
+				</form>
+			</div>
+		</section>
+		<footer>
+			<div class="developer">
                 <div>
                     <p>Desenvolvido por Rafael Vasques<br>2022</p>
                 </div>
             </div>
-        </footer>
+		</footer>
 	</body>
 </html>

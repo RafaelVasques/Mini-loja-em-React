@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<title>Alura Geek</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/base.css">
+        <link rel="stylesheet" href="./styles/header.css">
+		<link rel="stylesheet" href="./styles/add-product.css">
+		<link rel="stylesheet" href="./styles/contact-us.css">
+		<link rel="stylesheet" href="./styles/footer.css">
+	</head>
+	<body>
+		<header>
+			<div class="container header__top">
+				<img src="./images/logo.svg" alt="Alura Geek" class="header__logo">
+
+				<div class="header__right-elements-container">
+					<a class="button button__white menu__admin-button" href="./admin_products.html">Menu administrador</a>
+					<div class="search__bar-wrapper">
+						<div class="search__bar-background"></div>
+						<form action="">
+							<input type="text" class="search__bar" placeholder="O que deseja encontrar?">
+							<button class="search__button"><img src="./images/mag_glass.svg" alt="Busque um produto"></button>
+						</form>
+					</div>
+				</div>
+				
+			</div>
+		</header>
+		<section class="container add__product-area">
+			<div class="add__product-wrapper">
+				<p>Adicionar novo produto</p>
+				<form class="add__product-form" action="./admin_products.html">
+					<div class="text__box add__product-input-wrapper">
+						<p>URL da imagem</p>
+						<input type="text" class="">
+					</div>
+					<div class="text__box add__product-input-wrapper">
+						<p>Categoria</p>
+						<input type="text" class="">
+					</div>
+					<div class="text__box add__product-input-wrapper">
+						<p>Nome do produto</p>
+						<input type="text" class="">
+					</div>
+					<div class="text__box add__product-input-wrapper">
+						<p>Preço do produto</p>
+						<input type="text" class="">
+					</div>
+					<div class="text__box add__product-textarea-wrapper">
+						<p>Descrição do produto</p>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</div>
+					<button class="button__blue add__product-button">Adicionar produto</button>
+				</form>
+			</div>
+		</section>
+		<section class="container contact__us">
+			<div class="contact__us-links">
+				<img src="./images/logo.svg" alt="Alura Geek" class="contact__us-logo">
+				<ul>
+					<li><a href="#">Quem somos nós</a></li>
+					<li><a href="#">Política de privacidade</a></li>
+					<li><a href="#">Programa fidelidade</a></li>
+					<li><a href="#">Nossas lojas</a></li>
+					<li><a href="#">Quero ser franqueado</a></li>
+					<li><a href="#">Anuncie aqui</a></li>
+				</ul>
+			</div>
+			<div class="contact__us-form">
+				<p class="contact__us-title">Fale conosco</p>
+				<form action="">
+					<div class="text__box contact__us-name-wrapper">
+						<p>Nome</p>
+						<input type="text">
+					</div>
+					<div class="text__box contact__us-message-wrapper">
+						<p>Escreva sua mensagem</p>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</div>
+					<button class="button button__blue button__contact">Enviar Mensagem</button>
+				</form>
+			</div>
+		</section>
+		<footer>
+			<div class="developer">
+                <div>
+                    <p>Desenvolvido por Rafael Vasques<br>2022</p>
+                </div>
+            </div>
+		</footer>
+	</body>
+</html>

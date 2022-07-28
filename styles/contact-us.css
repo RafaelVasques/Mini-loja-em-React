@@ -1,0 +1,129 @@
+.contact__us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-contact);
+}
+
+.contact__us-logo {
+    width: 176px;
+}
+
+.contact__us-links {
+    margin: 16px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.contact__us-links li {
+    margin: 16px 0;
+}
+
+.contact__us-form {
+    width: 100%;
+    margin: 16px 0;
+}
+
+.contact__us-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+.contact__us-name-wrapper {
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px 0;
+}
+
+.contact__us-name-wrapper p {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+.contact__us-name-wrapper input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.contact__us-message-wrapper {
+    height: 82px;
+    padding: 16px 12px;
+    margin: 0 0 8px 0;
+}
+
+.contact__us-message-wrapper p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+.contact__us-message-wrapper textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.button__contact {
+    width: 151px;
+    height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .contact__us {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .contact__us-links {
+        margin: 32px 0 8px;
+        text-align: left;
+    }
+
+    .contact__us-links li {
+        margin: 24px 0;
+    }
+
+    .contact__us-form {
+        width: 61.65%;
+        margin: 32px 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .contact__us-logo {
+        margin-right: 112px;
+    }
+
+    .contact__us-links ul {
+        margin-top: -16px;
+    }
+
+    .contact__us-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .contact__us-links {
+        margin: 64px 0;
+    }
+
+    .contact__us-form {
+        width: 49.30%;
+        margin: 64px 0;
+    }
+}
