@@ -1,0 +1,19 @@
+.menu__admin-button {
+    width: 166px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+@media screen and (min-width: 768px){
+    .menu__admin-button {
+        width: 166px;
+        order: 2;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .menu__admin-button {
+        height: 51px;
+    }
+}

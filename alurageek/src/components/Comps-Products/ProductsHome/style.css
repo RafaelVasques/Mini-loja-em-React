@@ -1,0 +1,5 @@
+.products__home {
+    background-color: var(--bg-products);
+    display: flex;
+    flex-direction: column;
+}
