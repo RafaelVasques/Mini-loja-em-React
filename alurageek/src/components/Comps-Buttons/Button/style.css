@@ -1,0 +1,36 @@
+.button {
+    height: 40px;
+    min-width: 166px;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.button__white {
+    background-color: var(--white);
+    border: 2px solid var(--button-fill);
+    color: var(--blue);
+}
+
+.button__white:hover {
+    background-color: var(--button-white-hover);
+}
+
+.button__blue {
+    background-color: var(--button);
+    color: var(--white);
+    border: none;
+}
+
+.button__blue:hover {
+    background-color: var(--button-blue-hover);
+}
+
+@media screen and (min-width: 1440px) {
+    .button {
+        height: 51px;
+    }
+}

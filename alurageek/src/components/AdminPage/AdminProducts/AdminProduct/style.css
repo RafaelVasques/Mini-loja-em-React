@@ -1,0 +1,54 @@
+.admin__product {
+    position: relative;
+    margin: 15px 8px 0;
+    width: calc(50% - 16px);
+}
+
+.admin__product-image {
+    width: 100%;
+}
+
+.admin__product-controls {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+}
+
+.admin__product-control-delete {
+    margin-right: 24px;
+}
+
+.admin__product-control-edit {
+    margin-right: 11px;
+}
+
+.admin__product-description {
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.admin__product-price {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.admin__product-code {
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .admin__product {
+        margin-top: 16px;
+        width: calc(25% - 16px);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .admin__product {
+        width: calc(16.66666666666667% - 16px);
+    }
+}
