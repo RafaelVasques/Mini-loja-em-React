@@ -4,12 +4,12 @@ export function UnstructureArrayProducts(allArraysProducts) {
         return item.products
     });
 
-    let newArray = new Array();
+    let UnstructuredArray = new Array();
     for(var i = 0; i < arrayProducts.length; i++) {
     
-        newArray = newArray.concat(arrayProducts[i])
+        UnstructuredArray = UnstructuredArray.concat(arrayProducts[i])
 
     };
 
-    return newArray
+    return UnstructuredArray
 }

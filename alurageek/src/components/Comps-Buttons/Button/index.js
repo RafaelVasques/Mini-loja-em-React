@@ -3,6 +3,6 @@ import "./style.css";
 
 export default function Button (props){
     return (
-        <a className={props.buttonStyles} href={props.buttonLink}> {props.buttonText} </a>
+        <button className={props.buttonStyles} type={props.buttonType} form={props.buttonFormId}> {props.buttonText} </button>
     );
 }

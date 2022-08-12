@@ -6,14 +6,15 @@ import Button from "../../../Comps-Buttons/Button";
 export default function AddProduct (){
     
 	const addProductButtonText = "Adicionar Produto";
-    const addProductButtonLink = "#";
+    const addProductButtonType = "submit";
+	const addProductButtonFormId = "add__product-form";
     const addProductButtonStyles = "button button__blue add__product-button";
 	
 	return (
         <section className="container add__product-area">
 			<div className="add__product-wrapper">
 				<p>Adicionar novo produto</p>
-				<form className="add__product-form" action="./admin_products.html">
+				<form className="add__product-form" action="/admin" id="add__product-form">
 					<div className="text__box add__product-input-wrapper">
 						<p>URL da imagem</p>
 						<input type="text" className="" />
@@ -36,7 +37,8 @@ export default function AddProduct (){
 					</div>
 					<Button
 						buttonText = {addProductButtonText}
-						buttonLink = {addProductButtonLink}
+						buttonType = {addProductButtonType}
+						buttonFormId = {addProductButtonFormId}
 						buttonStyles = {addProductButtonStyles}
 					/>
 				</form>

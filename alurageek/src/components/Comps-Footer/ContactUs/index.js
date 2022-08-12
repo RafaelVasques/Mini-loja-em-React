@@ -5,14 +5,15 @@ import Button from "../../Comps-Buttons/Button";
 
 export default function ContactUs (){
     
-	const buttonContactText = 'Enviar Mensagem';
-	const buttonContactLink = '#';
-	const buttonContactStyles = 'button button__blue button__contact';
+	const contactButtonText = 'Enviar Mensagem';
+	const contactButtonType = 'submit';
+	const contactButtonFormId = 'contact__us-form';
+	const contactButtonStyles = 'button button__blue button__contact';
 
 	return (
         <section className="container contact__us">
 			<div className="contact__us-links">
-				<img src="./images/logo.svg" alt="Alura Geek" className="contact__us-logo" />
+				<a href="#"><img src="/images/logo.svg" alt="Alura Geek" className="contact__us-logo" /></a>
 				<ul>
 					<li><a href="#">Quem somos nós</a></li>
 					<li><a href="#">Política de privacidade</a></li>
@@ -24,7 +25,7 @@ export default function ContactUs (){
 			</div>
 			<div className="contact__us-form">
 				<p className="contact__us-title">Fale conosco</p>
-				<form action="">
+				<form action="" id="contact__us-form">
 					<div className="text__box contact__us-name-wrapper">
 						<p>Nome</p>
 						<input type="text" />
@@ -34,9 +35,10 @@ export default function ContactUs (){
 						<textarea name="" id="" cols="30" rows="10"></textarea>
 					</div>
 					<Button 
-						buttonText = {buttonContactText}
-						buttonLink = {buttonContactLink}
-						buttonStyles = {buttonContactStyles}
+						buttonText = {contactButtonText}
+						buttonType = {contactButtonType}
+						buttonFormId = {contactButtonFormId}
+						buttonStyles = {contactButtonStyles}
 					/>
 				</form>
 			</div>

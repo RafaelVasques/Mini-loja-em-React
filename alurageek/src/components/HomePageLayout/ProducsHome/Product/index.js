@@ -10,7 +10,7 @@ export default function Product (props){
                 <figcaption className="product__informations">
                     <p className="product__description"> {props.productName} </p>
                     <p className="product__price">R$ {props.productPrice} </p>
-                    <a href="./product.html" className="see__product">Ver produto</a>
+                    <a href="/product" className="see__product">Ver produto</a>
                 </figcaption>
             </figure>
         </div>

@@ -1,19 +1,20 @@
 import React from 'react';
 import './style.css';
 
-import ButtonLink from '../../Comps-Buttons/ButtonLink';
-import AdminProduct from './AdminProduct';
 import { AllProducts } from '../../AllProducts.js';
 import { UnstructureArrayProducts } from './UnstructureArrayProducts';
+
+import ButtonLink from '../../Comps-Buttons/ButtonLink';
+import AdminProduct from './AdminProduct';
 
 export default function AdminProducts () {
     
 	const addProductButtonText = 'Adicionar Produto';
-	const addProductButtonLink = '#';
+	const addProductButtonLink = '/admin/add-product';
 	const addProductButtonStyles = 'button button__blue';
 
 	const allProducts = AllProducts();
-	const newArrayProducts = UnstructureArrayProducts(allProducts);
+	const UnstructuredArrayProducts = UnstructureArrayProducts(allProducts);
 
 	return (
         <section className="container admin__products-wrapper">
@@ -28,7 +29,7 @@ export default function AdminProducts () {
 				</div>
 				<div className="admin__products">
 
-					{newArrayProducts.map((item, index) => (
+					{UnstructuredArrayProducts.map((item, index) => (
 						<AdminProduct 
 							key = {index}
 							productImgUrl = {item.productImgUrl}

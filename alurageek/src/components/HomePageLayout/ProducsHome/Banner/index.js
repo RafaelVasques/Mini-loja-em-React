@@ -10,7 +10,7 @@ export default function Banner (){
     const bannerButtonStyles = "button__link button__link-blue button__banner";
 
     return (
-        <div className="banner__container">
+        <section className="banner__container">
             <figure>
                 <img src="./images/banner-image2.png" alt="Dezembro Promocional" className="banner__image" />
                 <div className="container banner__content-wrapper">
@@ -25,6 +25,6 @@ export default function Banner (){
                     />
                 </div>
             </figure>
-        </div>
+        </section>
     );
 }
