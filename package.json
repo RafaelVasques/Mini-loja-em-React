@@ -4,7 +4,7 @@
   
   "version": "0.1.0",
   
-  "homepage": "desafio-Alura-1/",
+  "homepage": "https://github.com/RafaelVasques/desafio-Alura-1.git",
   
   "private": true,
   
@@ -40,6 +40,10 @@
   },
   
   "scripts": {
+
+  "predeploy": "npm run build",
+
+  "deploy": "gh-pages -d build",
   
     
   "start": "react-scripts start",
