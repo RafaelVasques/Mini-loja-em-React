@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+import { Url } from '../../../Url';
+
 import Button from "../../../Comps-Buttons/Button";
 
 export default function AddProduct (){
@@ -14,7 +16,7 @@ export default function AddProduct (){
         <section className="container add__product-area">
 			<div className="add__product-wrapper">
 				<p>Adicionar novo produto</p>
-				<form className="add__product-form" action="/admin" id="add__product-form">
+				<form className="add__product-form" action={ Url() + '/admin'} id="add__product-form">
 					<div className="text__box add__product-input-wrapper">
 						<p>URL da imagem</p>
 						<input type="text" className="" />

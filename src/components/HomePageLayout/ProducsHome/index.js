@@ -8,7 +8,7 @@ import { AllProducts } from '../../AllProducts';
 
 export default function ProductsHome (){
 
-    const listOfProducts = AllProducts()
+    const listOfProducts = AllProducts();
 
     return (
         <div>

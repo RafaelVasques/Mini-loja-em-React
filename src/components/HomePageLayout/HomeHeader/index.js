@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+import { Url } from '../../Url';
+
 import ButtonLink from "../../Comps-Buttons/ButtonLink";
 
 export default function HomeHeader (){
@@ -12,7 +14,7 @@ export default function HomeHeader (){
     return (
         <header>
             <div className="container header__top">
-                <a href="/"><img src="/images/logo.svg" alt="Alura Geek" className="header__logo" /></a>
+                <a href={ Url() } ><img src={ Url() + '/images/logo.svg'} alt="Alura Geek" className="header__logo" /></a>
                 <div className="header__right-elements-container">
                     <ButtonLink 
                         buttonText = {loginButtonText}
@@ -23,7 +25,7 @@ export default function HomeHeader (){
                         <div className="search__bar-background"></div>
                         <form action="">
                             <input type="text" className="search__bar" placeholder="O que deseja encontrar?" />
-                            <button className="search__button"><img src="/images/mag_glass.svg" alt="Busque um produto" /></button>
+                            <button className="search__button"><img src={ Url() + '/images/mag_glass.svg'} alt="Busque um produto" /></button>
                         </form>
                     </div>
                 </div>

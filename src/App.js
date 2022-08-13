@@ -2,6 +2,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { Url } from './components/Url';
+
 import './Reset.css';
 import './App.css';
 import './Base.css';
@@ -23,15 +25,15 @@ export default function App() {
     <div>
         <BrowserRouter>
         <Routes>
-          <Route path='/' element={<HomePageLayout />}>
-            <Route path='/' element={<ProductsHome />} />
-            <Route path='/product' element={<ProductDetails />} />
-            <Route path='/admin-login' element={<AdminLogin />} />
+          <Route path={Url()} element={<HomePageLayout />}>
+            <Route path={Url()} element={<ProductsHome />} />
+            <Route path={Url() + '/product'} element={<ProductDetails />} />
+            <Route path={Url() + '/admin-login'} element={<AdminLogin />} />
           </Route>
 
-          <Route path='/admin' element={<AdminPageLayout />}>
-            <Route path='/admin' element={<AdminProducts />} />
-            <Route path='/admin/add-product' element={<AddProduct />}/>
+          <Route path={Url() + '/admin'} element={<AdminPageLayout />}>
+            <Route path={Url() + '/admin'} element={<AdminProducts />} />
+            <Route path={Url() + '/admin/add-product'} element={<AddProduct />}/>
           </Route>
         </Routes>
       </BrowserRouter>

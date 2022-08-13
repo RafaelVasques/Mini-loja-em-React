@@ -1,14 +1,16 @@
 import React from "react";
 import "./style.css";
 
+import { Url } from '../../../Url';
+import { SimilarProducts } from '../../../SimilarProducts.js';
+
 import ButtonLink from "../../../Comps-Buttons/ButtonLink";
 import Product from "../Product";
-import { SimilarProducts } from '../../../SimilarProducts.js';
 
 export default function ProductDetails (){
     
     const buyButtonText = "Comprar";
-    const buyButtonLink = "/"
+    const buyButtonLink = '';
     const buyButtonStyles = "button button__blue button__buy";
 
     const similarProducts = SimilarProducts();
@@ -18,7 +20,7 @@ export default function ProductDetails (){
             <section className="container product__complete-description">
                 <figure className="product__complete-description-wrapper">
                     <div className="product__complete-description-image">
-                        <img src="./images/products_imgs/unsplash_6FDXGY9J6y4_produto.png" alt="Produto XYZ" />
+                        <img src={ Url() + '/images/products_imgs/unsplash_6FDXGY9J6y4_produto.png'} alt="Produto XYZ" />
                     </div>
                     <div className="product__complete-description-caption">
                         <figcaption>
