@@ -27,8 +27,8 @@ export default function App() {
         <Routes>
           <Route path={ Url() } element={<HomePageLayout />}>
             <Route path={ Url() } element={<ProductsHome />} />
-            <Route path={ Url() + '/product' } element={<ProductDetails />} />
-            <Route path={ Url() + '/admin-login' } element={<AdminLogin />} />
+            <Route path='/product' element={<ProductDetails />} />
+            <Route path='/admin-login' element={<AdminLogin />} />
           </Route>
 
           <Route path={ Url() + '/admin' } element={<AdminPageLayout />}>
