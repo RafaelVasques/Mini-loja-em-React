@@ -1,3 +1,3 @@
 export function Url() {
-      return "/desafio-Alura-1";
+      return "https://rafaelvasques.github.io/desafio-Alura-1";
 }
