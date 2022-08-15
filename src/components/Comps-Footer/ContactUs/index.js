@@ -15,14 +15,14 @@ export default function ContactUs (){
 	return (
         <section className="container contact__us">
 			<div className="contact__us-links">
-				<a ><img src={ Url() + '/images/logo.svg'} alt="Alura Geek" className="contact__us-logo" /></a>
+				<a href="#top"><img src={ Url() + '/images/logo.svg'} alt="Alura Geek" className="contact__us-logo" /></a>
 				<ul>
-					<li><a >Quem somos nós</a></li>
-					<li><a >Política de privacidade</a></li>
-					<li><a >Programa fidelidade</a></li>
-					<li><a >Nossas lojas</a></li>
-					<li><a >Quero ser franqueado</a></li>
-					<li><a >Anuncie aqui</a></li>
+					<li><a href="#top">Quem somos nós</a></li>
+					<li><a href="#top">Política de privacidade</a></li>
+					<li><a href="#top">Programa fidelidade</a></li>
+					<li><a href="#top">Nossas lojas</a></li>
+					<li><a href="#top">Quero ser franqueado</a></li>
+					<li><a href="#top">Anuncie aqui</a></li>
 				</ul>
 			</div>
 			<div className="contact__us-form">

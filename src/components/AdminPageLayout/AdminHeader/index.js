@@ -12,7 +12,7 @@ export default function AdminHeader (){
     const menuAdminButtonStyles = "button__link button__link-white menu__admin-button";
 	
 	return (
-        <header>
+        <header id="top">
 			<div className="container admin__header-top">
 				<a href={ Url() + '/admin'}><img src={ Url() + '/images/logo.svg'} alt="Alura Geek" className="admin__header-logo" /></a>
 				<div className="admin__header-right-elements-container">

@@ -15,7 +15,7 @@ export default function ProductsCategory (props){
             <div className="products__category-header">
                 <p className="products__category-name"> {props.categoryName} </p>
                 <div className="see__more-products-wrapper">
-                    <a className="see__more-products">Ver tudo</a>
+                    <a href="#top" className="see__more-products">Ver tudo</a>
                     <img src={ Url() + '/images/arrow.svg'} alt="ver tudo"/>
                 </div>
             </div>

@@ -11,7 +11,7 @@ export default function AdminProduct (props){
                 <img src= { Url() + props.productImgUrl } alt={props.productName} className="admin__product-image" />
                 <div className="admin__product-controls">
                     <div className="admin__product-controls-wrapper">
-                        <a className="admin__product-control-delete"><img src={ Url() + '/images/trash.svg' } alt="Excluir Produto" /></a>
+                        <a href="#top" className="admin__product-control-delete"><img src={ Url() + '/images/trash.svg' } alt="Excluir Produto" /></a>
                         <a href={ Url() + '/admin/add-product' } className="admin__product-control-edit"><img src={ Url() + '/images/edit.svg' } alt="Editar Produto" /></a>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ export default function HomeHeader (){
     const loginButtonStyles = "button button__white login__button";
   
     return (
-        <header>
+        <header id="top">
             <div className="container header__top">
                 <a href={ Url() } ><img src={ Url() + '/images/logo.svg'} alt="Alura Geek" className="header__logo" /></a>
                 <div className="header__right-elements-container">
