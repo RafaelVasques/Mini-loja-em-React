@@ -10,7 +10,7 @@ import Product from "../Product";
 export default function ProductDetails (){
     
     const buyButtonText = "Comprar";
-    const buyButtonLink = '';
+    const buyButtonLink = '/';
     const buyButtonStyles = "button button__blue button__buy";
 
     const similarProducts = SimilarProducts();
