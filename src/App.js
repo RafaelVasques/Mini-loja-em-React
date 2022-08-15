@@ -21,7 +21,6 @@ import ContactUs from './components/Comps-Footer/ContactUs';
 import Footer from './components/Comps-Footer/Footer';
 
 export default function App() {
-  console.log(Url());
   return (
     <div>
         <BrowserRouter>
