@@ -4,7 +4,7 @@ export function UnstructureArrayProducts(allArraysProducts) {
         return item.products
     });
 
-    let UnstructuredArray = new Array();
+    let UnstructuredArray = [];
     for(var i = 0; i < arrayProducts.length; i++) {
     
         UnstructuredArray = UnstructuredArray.concat(arrayProducts[i])
