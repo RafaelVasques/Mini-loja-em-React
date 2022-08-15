@@ -21,19 +21,20 @@ import ContactUs from './components/Comps-Footer/ContactUs';
 import Footer from './components/Comps-Footer/Footer';
 
 export default function App() {
+  console.log(Url());
   return (
     <div>
         <BrowserRouter>
         <Routes>
-          <Route path={Url()} element={<HomePageLayout />}>
-            <Route path={Url()} element={<ProductsHome />} />
-            <Route path={Url() + '/product'} element={<ProductDetails />} />
-            <Route path={Url() + '/admin-login'} element={<AdminLogin />} />
+          <Route path={ Url() } element={<HomePageLayout />}>
+            <Route path={ Url() } element={<ProductsHome />} />
+            <Route path={ Url() + '/product' } element={<ProductDetails />} />
+            <Route path={ Url() + '/admin-login' } element={<AdminLogin />} />
           </Route>
 
-          <Route path={Url() + '/admin'} element={<AdminPageLayout />}>
-            <Route path={Url() + '/admin'} element={<AdminProducts />} />
-            <Route path={Url() + '/admin/add-product'} element={<AddProduct />}/>
+          <Route path={ Url() + '/admin' } element={<AdminPageLayout />}>
+            <Route path={ Url() + '/admin' } element={<AdminProducts />} />
+            <Route path={ Url() + '/admin/add-product' } element={<AddProduct />}/>
           </Route>
         </Routes>
       </BrowserRouter>
