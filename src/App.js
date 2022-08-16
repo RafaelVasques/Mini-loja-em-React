@@ -25,8 +25,8 @@ export default function App() {
     <div>
         <BrowserRouter>
         <Routes>
-          <Route path={ Url() } element={<HomePageLayout />}>
-            <Route path={ Url() } element={<ProductsHome />} />
+          <Route path="/" element={<HomePageLayout />}>
+            <Route path="/" element={<ProductsHome />} />
             <Route path='/product' element={<ProductDetails />} />
             <Route path='/admin-login' element={<AdminLogin />} />
           </Route>
