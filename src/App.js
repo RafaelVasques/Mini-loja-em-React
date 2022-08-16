@@ -25,9 +25,9 @@ export default function App() {
     <div>
         <BrowserRouter>
         <Routes>
-          <Route path="/desafio-Alura-1" element={<HomePageLayout />}>
+          <Route path="/desafio-Alura-1" element={<ProductDetails />}>
             <Route path="/desafio-Alura-1" element={<ProductsHome />} />
-            <Route path='https://rafaelvasques.github.io/desafio-Alura-1/product' element={<ProductDetails />} />
+            <Route path='/desafio-Alura-1/product' element={<ProductDetails />} />
             <Route path='/desafio-Alura-1/admin-login' element={<AdminLogin />} />
           </Route>
 
