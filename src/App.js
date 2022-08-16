@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import { Url } from './components/Url';
 
@@ -23,7 +23,7 @@ import Footer from './components/Comps-Footer/Footer';
 export default function App() {
   return (
     <div>
-        <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/desafio-Alura-1" element={<ProductDetails />}>
             <Route path="/desafio-Alura-1" element={<ProductsHome />} />
@@ -36,7 +36,7 @@ export default function App() {
             <Route path={ Url() + '/admin/add-product' } element={<AddProduct />}/>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
 
       <ContactUs />
       <Footer />
