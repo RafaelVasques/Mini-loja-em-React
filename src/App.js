@@ -25,10 +25,10 @@ export default function App() {
     <div>
       <HashRouter>
         <Routes>
-          <Route path="/desafio-Alura-1" element={<ProductDetails />}>
-            <Route path="/desafio-Alura-1" element={<ProductsHome />} />
-            <Route path='/desafio-Alura-1/product' element={<ProductDetails />} />
-            <Route path='/desafio-Alura-1/admin-login' element={<AdminLogin />} />
+          <Route path="/" element={<HomePageLayout />}>
+            <Route path="/" element={<ProductsHome />} />
+            <Route path='/product' element={<ProductDetails />} />
+            <Route path='/admin-login' element={<AdminLogin />} />
           </Route>
 
           <Route path={ Url() + '/admin' } element={<AdminPageLayout />}>
