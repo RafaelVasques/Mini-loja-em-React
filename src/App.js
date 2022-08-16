@@ -8,7 +8,7 @@ import './Reset.css';
 import './App.css';
 import './Base.css';
 
-// import HomePageLayout from './components/HomePageLayout';
+import HomePageLayout from './components/HomePageLayout';
 import ProductsHome from './components/HomePageLayout/ProducsHome';
 import ProductDetails from './components/HomePageLayout/ProducsHome/ProductDetails';
 import AdminLogin from './components/HomePageLayout/AdminLogin';
