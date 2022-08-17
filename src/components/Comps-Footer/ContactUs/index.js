@@ -1,8 +1,6 @@
 import React from "react";
 import "./style.css";
 
-import { Url } from '../../Url';
-
 import Button from "../../Comps-Buttons/Button";
 
 export default function ContactUs (){
@@ -15,7 +13,7 @@ export default function ContactUs (){
 	return (
         <section className="container contact__us">
 			<div className="contact__us-links">
-				<a href="#top"><img src={ Url() + '/images/logo.svg'} alt="Alura Geek" className="contact__us-logo" /></a>
+				<a href="#top"><img src="/images/logo.svg" alt="Alura Geek" className="contact__us-logo" /></a>
 				<ul>
 					<li><a href="#top">Quem somos nós</a></li>
 					<li><a href="#top">Política de privacidade</a></li>

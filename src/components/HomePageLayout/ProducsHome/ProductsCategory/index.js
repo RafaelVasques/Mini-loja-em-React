@@ -1,8 +1,6 @@
 import React from "react";
 import "./style.css";
 
-import { Url } from '../../../Url';
-
 import Product from "../Product";
 
 export default function ProductsCategory (props){
@@ -16,7 +14,7 @@ export default function ProductsCategory (props){
                 <p className="products__category-name"> {props.categoryName} </p>
                 <div className="see__more-products-wrapper">
                     <a href="#top" className="see__more-products">Ver tudo</a>
-                    <img src={ Url() + '/images/arrow.svg'} alt="ver tudo"/>
+                    <img src="/images/arrow.svg" alt="ver tudo"/>
                 </div>
             </div>
             <div className="products">
