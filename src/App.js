@@ -25,15 +25,15 @@ export default function App() {
     <div>
       <BrowserRouter >
         <Routes>
-          <Route path="/" element={<HomePageLayout />}>
-            <Route path="/" element={<ProductsHome />} />
+          <Route path='/' element={<HomePageLayout />}>
+            <Route path='/' element={<ProductsHome />} />
             <Route path='/product' element={<ProductDetails />} />
             <Route path='/admin-login' element={<AdminLogin />} />
           </Route>
 
-          <Route path={ Url() + '/admin' } element={<AdminPageLayout />}>
-            <Route path={ Url() + '/admin' } element={<AdminProducts />} />
-            <Route path={ Url() + '/admin/add-product' } element={<AddProduct />}/>
+          <Route path='/admin' element={<AdminPageLayout />}>
+            <Route path='/admin' element={<AdminProducts />} />
+            <Route path='/admin/add-product' element={<AddProduct />}/>
           </Route>
         </Routes>
       </BrowserRouter>
