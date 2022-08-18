@@ -2,8 +2,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { Url } from './components/Url';
-
 import './Reset.css';
 import './App.css';
 import './Base.css';
