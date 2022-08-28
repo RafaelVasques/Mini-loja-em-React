@@ -5,9 +5,11 @@ import ButtonLink from "../../Comps-Buttons/ButtonLink";
 
 export default function AdminHeader (){
     
-	const menuAdminButtonText = "Menu Admin";
-    const menuAdminButtonLink = "/admin";
-    const menuAdminButtonStyles = "button__link button__link-white menu__admin-button";
+	const menuAdminButtonLinkProperties = {
+		text: 'Menu Admin',
+		link: '/admin',
+		styles: 'button__link button__link-white menu__admin-button'
+	};
 	
 	return (
         <header id="top">
@@ -15,9 +17,7 @@ export default function AdminHeader (){
 				<a href="/admin"><img src="/images/logo.svg" alt="Alura Geek" className="admin__header-logo" /></a>
 				<div className="admin__header-right-elements-container">
 					<ButtonLink 
-						buttonText = {menuAdminButtonText}
-						buttonLink = {menuAdminButtonLink}
-						buttonStyles = {menuAdminButtonStyles}
+						properties = {menuAdminButtonLinkProperties}
                 	/>
 					<div className="admin__search-bar-wrapper">
 						<div className="admin__search-bar-background"></div>

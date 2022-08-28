@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./style.css";
 
 import Button from "../../../Comps-Buttons/Button";
 
 export default function AddProduct (){
     
-	const addProductButtonText = "Adicionar Produto";
-    const addProductButtonType = "submit";
-	const addProductButtonFormId = "add__product-form";
-    const addProductButtonStyles = "button button__blue add__product-button";
-	
+	const addProductButtonProperties = {
+		text: 'Adicionar Produto',
+		type: 'submit',
+		formId: 'add__product-form',
+		styles: 'button button__blue add__product-button'
+	};
+
 	return (
         <section className="container add__product-area">
 			<div className="add__product-wrapper">
@@ -36,10 +38,7 @@ export default function AddProduct (){
 						<textarea name="" id="" cols="30" rows="10"></textarea>
 					</div>
 					<Button
-						buttonText = {addProductButtonText}
-						buttonType = {addProductButtonType}
-						buttonFormId = {addProductButtonFormId}
-						buttonStyles = {addProductButtonStyles}
+						properties = {addProductButtonProperties}
 					/>
 				</form>
 			</div>

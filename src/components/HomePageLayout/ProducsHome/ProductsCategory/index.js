@@ -1,12 +1,8 @@
 import React from "react";
 import "./style.css";
 
-import Product from "../Product";
-
 export default function ProductsCategory (props){
     
-    const products = props.products;
-
     return (
 
         <div className="container products__category">
@@ -18,19 +14,7 @@ export default function ProductsCategory (props){
                 </div>
             </div>
             <div className="products">
-
-                {products.map((item, index) => (
-
-                    <Product
-                        key = {index}
-                        productImgUrl = {item.productImgUrl}
-                        productName = {item.productName}
-                        productPrice = {item.productPrice}
-                        productDescription = {item.productDescription}
-                    />
-                
-                ))}
-
+                {props.children}
             </div>
         </div>
         

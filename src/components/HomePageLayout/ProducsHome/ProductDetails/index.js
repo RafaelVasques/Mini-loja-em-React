@@ -7,10 +7,12 @@ import ButtonLink from "../../../Comps-Buttons/ButtonLink";
 import Product from "../Product";
 
 export default function ProductDetails (){
-    
-    const buyButtonText = "Comprar";
-    const buyButtonLink = '/';
-    const buyButtonStyles = "button button__blue button__buy";
+
+    const buyButtonLinkProperties = {
+		text: 'Comprar',
+		link: '/',
+		styles: 'button button__blue button__buy'
+	};
 
     const similarProducts = SimilarProducts();
     
@@ -37,9 +39,7 @@ export default function ProductDetails (){
                             </p>
                         </figcaption>
                         <ButtonLink
-                            buttonText = {buyButtonText}
-                            buttonLink = {buyButtonLink}
-                            buttonStyles = {buyButtonStyles}
+                            properties = {buyButtonLinkProperties}
                         />
                     </div>
                 </figure>

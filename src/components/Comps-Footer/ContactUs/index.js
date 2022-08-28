@@ -4,11 +4,13 @@ import "./style.css";
 import Button from "../../Comps-Buttons/Button";
 
 export default function ContactUs (){
-    
-	const contactButtonText = 'Enviar Mensagem';
-	const contactButtonType = 'submit';
-	const contactButtonFormId = 'contact__us-form';
-	const contactButtonStyles = 'button button__blue button__contact';
+
+	const contactButtonProperties = {
+		text: 'Enviar Mensagem',
+		type: 'submit',
+		formId: 'contact__us-form',
+		styles: 'button button__blue button__contact'
+	};
 
 	return (
         <section className="container contact__us">
@@ -35,10 +37,7 @@ export default function ContactUs (){
 						<textarea name="" id="" cols="30" rows="10"></textarea>
 					</div>
 					<Button 
-						buttonText = {contactButtonText}
-						buttonType = {contactButtonType}
-						buttonFormId = {contactButtonFormId}
-						buttonStyles = {contactButtonStyles}
+						properties = {contactButtonProperties}
 					/>
 				</form>
 			</div>

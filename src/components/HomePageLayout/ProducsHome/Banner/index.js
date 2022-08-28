@@ -4,10 +4,12 @@ import "./style.css";
 import ButtonLink from "../../../Comps-Buttons/ButtonLink";
 
 export default function Banner (){
-    
-    const bannerButtonText = "Ver Consoles";
-    const bannerButtonLink = "#"
-    const bannerButtonStyles = "button__link button__link-blue button__banner";
+
+    const bannerButtonLinkProperties = {
+		text: 'Ver Consoles',
+		link: '#',
+		styles: 'button__link button__link-blue button__banner'
+	};
 
     return (
         <section className="banner__container">
@@ -19,9 +21,7 @@ export default function Banner (){
                         <p className="banner__text">Produtos selecionados com 33% de desconto</p>
                     </figcaption>
                     <ButtonLink
-                        buttonText = {bannerButtonText}
-                        buttonLink = {bannerButtonLink}
-                        buttonStyles = {bannerButtonStyles}
+                        properties = {bannerButtonLinkProperties}
                     />
                 </div>
             </figure>

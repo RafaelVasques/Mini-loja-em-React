@@ -5,9 +5,11 @@ import ButtonLink from "../../Comps-Buttons/ButtonLink";
 
 export default function HomeHeader (){
 
-    const loginButtonText = "Login";
-    const loginButtonLink = "/admin-login";
-    const loginButtonStyles = "button button__white login__button";
+    const loginButtonLinkProperties = {
+		text: 'Login',
+		link: '/admin-login',
+		styles: 'button button__white login__button'
+	};
   
     return (
         <header id="top">
@@ -15,9 +17,7 @@ export default function HomeHeader (){
                 <a href="/" ><img src="/images/logo.svg" alt="Alura Geek" className="header__logo" /></a>
                 <div className="header__right-elements-container">
                     <ButtonLink 
-                        buttonText = {loginButtonText}
-                        buttonLink = {loginButtonLink}
-                        buttonStyles = {loginButtonStyles}
+                        properties = {loginButtonLinkProperties}
                     />
                     <div className="search__bar-wrapper">
                         <div className="search__bar-background"></div>
