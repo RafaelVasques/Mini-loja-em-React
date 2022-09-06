@@ -9,9 +9,9 @@ export const ProductsProvider = ({children}) => {
 
     const [addProductImage, setAddProductImage] = useState();
     const [addProductCategory, setAddProductCategory] = useState();
-    const [addProductName, setAddProductName] = useState('42342');
-    const [addProductPrice, setAddProductPrice] = useState('423423');
-    const [addProductDescription, setAddProductDescription] = useState('423423');
+    const [addProductName, setAddProductName] = useState();
+    const [addProductPrice, setAddProductPrice] = useState();
+    const [addProductDescription, setAddProductDescription] = useState();
 
     const [products, setProduct] = useState(AllProducts);
 
