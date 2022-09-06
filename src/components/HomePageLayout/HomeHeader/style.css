@@ -8,6 +8,7 @@
 
 .header__logo {
     width: 100px;
+    cursor: pointer;
 }
 
 .header__right-elements-container {
@@ -48,6 +49,10 @@
     border: none;
     background-color: var(--white);
     margin-top: 10px;
+}
+
+.mag__glass {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

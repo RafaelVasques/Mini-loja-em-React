@@ -6,8 +6,7 @@ export default function Button (props){
     return (
         <button
             className={props.properties.styles}
-            type={props.properties.type}
-            form={props.properties.formId}
+            onClick={props.onClick}
         >
             {props.properties.text}
         </button>

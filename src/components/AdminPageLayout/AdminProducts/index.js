@@ -1,21 +1,27 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './style.css';
 
-import { AllProducts } from '../../AllProducts.js';
+import { ProductContext } from '../../contexts/productContext';
 
 import ButtonLink from '../../Comps-Buttons/ButtonLink';
 import AdminProduct from './AdminProduct';
-
-const listOfProducts = AllProducts();
 
 export default function AdminProducts () {
 	
 	const addProductButtonLinkProperties = {
 		text: 'Adicionar Produto',
-		link: '/admin/add-product',
-		styles: 'button button__blue'
+		styles: 'button__link button__blue'
 	};
-	
+
+	const { products } = useContext(ProductContext);
+		
+	const navigate = useNavigate();
+	function handleAddProductClick(event) {
+		navigate("add-product");
+	};
+
 	return (
         <section className="container admin__products-wrapper">
 			<div className="all__products">
@@ -23,11 +29,15 @@ export default function AdminProducts () {
 					<p>Todos os produtos</p>
 					<ButtonLink 
 						properties = {addProductButtonLinkProperties}
+						onClick={ ()=>{
+							handleAddProductClick();
+						}}
 					/>
+
 				</div>
 				<div className="admin__products">
 
-					{listOfProducts.map((item, index) => (
+					{products.map((item, index) => (
 						<AdminProduct 
 							key = {index}
 							productImgUrl = {item.productImgUrl}

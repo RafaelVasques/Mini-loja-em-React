@@ -2,6 +2,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { ProductsProvider } from './components/contexts/productContext';
+
 import './Reset.css';
 import './App.css';
 import './Base.css';
@@ -19,22 +21,30 @@ import ContactUs from './components/Comps-Footer/ContactUs';
 import Footer from './components/Comps-Footer/Footer';
 
 export default function App() {
-  
+
   return (
     <div>
+      
       <BrowserRouter >
-        <Routes>
-          <Route path='/' element={<HomePageLayout />}>
-            <Route path='/' element={<ProductsHome />} />
-            <Route path='/product' element={<ProductDetails />} />
-            <Route path='/admin-login' element={<AdminLogin />} />
-          </Route>
+        <ProductsProvider>
+          <Routes>
 
-          <Route path='/admin' element={<AdminPageLayout />}>
-            <Route path='/admin' element={<AdminProducts />} />
-            <Route path='/admin/add-product' element={<AddProduct />}/>
-          </Route>
-        </Routes>
+              <Route path='/' element={<HomePageLayout />}>
+                
+                <Route path='/' element={<ProductsHome />}/>
+                <Route path='/product' element={<ProductDetails />}/>
+                <Route path='/admin-login' element={<AdminLogin />} />
+
+              </Route>
+
+            <Route path='/admin' element={<AdminPageLayout />}>
+                
+                <Route path='/admin' element={<AdminProducts />}/>
+                <Route path='/admin/add-product' element={<AddProduct />}/>
+
+            </Route>
+          </Routes>
+        </ProductsProvider>
       </BrowserRouter>
 
       <ContactUs />

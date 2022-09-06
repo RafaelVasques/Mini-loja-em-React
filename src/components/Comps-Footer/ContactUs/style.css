@@ -38,7 +38,7 @@
     margin: 8px 0;
 }
 
-.contact__us-name-wrapper p {
+.contact__us label {
     font-weight: 400;
     font-size: 0.75rem;
     color: var(--gray);
@@ -58,12 +58,6 @@
     height: 82px;
     padding: 16px 12px;
     margin: 0 0 8px 0;
-}
-
-.contact__us-message-wrapper p {
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--gray);
 }
 
 .contact__us-message-wrapper textarea {

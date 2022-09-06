@@ -44,6 +44,10 @@
     font-size: 0.875rem;
 }
 
+.mag__glass {
+    cursor: pointer;
+}
+
 .admin__search-button {
     border: none;
     background-color: var(--white);
