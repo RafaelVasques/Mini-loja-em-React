@@ -35,6 +35,10 @@
         overflow: hidden;
     }
 
+    .banner__image {
+        transform: translate(0, -15%); 
+    }
+
     .banner__content-wrapper {
         padding-bottom: 32px;
     }
@@ -49,5 +53,17 @@
         font-weight: 600;
         font-size: 1.375rem;
         margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .banner__image {
+        transform: translate(0, -25%); 
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .banner__image {
+        transform: translate(0, -25%); 
     }
 }
