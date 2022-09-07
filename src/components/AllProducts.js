@@ -135,51 +135,6 @@ export function AllProducts() {
                   productCode: '#111111',
                   categoryId: '0',
                   productCategory: 'Star Wars'
-            },{
-                  productId: '0',
-                  productName: 'Caneca Star Wars ',
-                  productImgUrl: '/images/products_imgs/unsplash_6FDXGY9J6y4.png',
-                  productPrice: '600000000,00',
-                  productDescription: 'Voluptas voluptatum quibusdam similique, className debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.',
-                  productCode: '#222222',
-                  categoryId: '0',
-                  productCategory: 'Star Wars'
-            },{
-                  productId: '0',
-                  productName: 'Caneca Star Wars',
-                  productImgUrl: '/images/products_imgs/unsplash_6FDXGY9J6y4.png',
-                  productPrice: '60000000,00',
-                  productDescription: 'Voluptas voluptatum quibusdam similique, className debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.',
-                  productCode: '#222222',
-                  categoryId: '0',
-                  productCategory: 'Star Wars'
-            },{
-                  productId: '0',
-                  productName: 'Caneca Star Wars',
-                  productImgUrl: '/images/products_imgs/unsplash_6FDXGY9J6y4.png',
-                  productPrice: '6000000000,00',
-                  productDescription: 'Voluptas voluptatum quibusdam similique, className debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.',
-                  productCode: '#222222',
-                  categoryId: '0',
-                  productCategory: 'Star Wars'
-            },{
-                  productId: '0',
-                  productName: 'Caneca Star Wars',
-                  productImgUrl: '/images/products_imgs/unsplash_6FDXGY9J6y4.png',
-                  productPrice: '6000000000,00',
-                  productDescription: 'Voluptas voluptatum quibusdam similique, className debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.',
-                  productCode: '#222222',
-                  categoryId: '0',
-                  productCategory: 'Star Wars'
-            },{
-                  productId: '0',
-                  productName: 'Caneca Star Wars',
-                  productImgUrl: '/images/products_imgs/unsplash_6FDXGY9J6y4.png',
-                  productPrice: '6000000000,00',
-                  productDescription: 'Voluptas voluptatum quibusdam similique, className debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.',
-                  productCode: '#222222',
-                  categoryId: '0',
-                  productCategory: 'Star Wars'
             }];
 
       return ListProducts;
