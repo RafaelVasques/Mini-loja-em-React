@@ -16,12 +16,13 @@ export default function ProductsHome (){
 
     const categories = Categories();
     
-    let categoryId
-    let handleProducts = []
-    let renderProducts = []
+    let categoryId;
+    let handleProducts = [];
+    let renderProducts = [];
     
     categories.map((item, index) => {
-        categoryId = item.categoryId
+
+        categoryId = item.categoryId;
     
         products.map((item, index) => {
             if(categoryId == item.categoryId){
@@ -31,23 +32,24 @@ export default function ProductsHome (){
                         productImgUrl = {item.productImgUrl}
                         productName = {item.productName}
                         productPrice = {item.productPrice}
-                        productDescription = {item.productDescription}
+                        productId = {item.productId}
                     />
-                )
-            }
-        })
+                );
+            };
+        });
         
         renderProducts.push(
             <ProductsCategory
                 key = {index}
                 categoryName = {item.categoryName}
+                categoryId = {item.categoryId}
             >
                 {handleProducts}
             </ProductsCategory>
-        )
+        );
     
-        handleProducts = []
-    })  
+        handleProducts = [];
+    });
 
     return (
         <div>
@@ -59,4 +61,4 @@ export default function ProductsHome (){
             </section>
         </div>
     );
-}
+};

@@ -15,11 +15,11 @@ export const ProductsProvider = ({children}) => {
 
     const [products, setProduct] = useState(AllProducts);
 
-    const categories = Categories()
+    const categories = Categories();
     
     const saveProduct = () => {
         
-        let category = categories.find(categoryId => categoryId.categoryId == addProductCategory);
+        const category = categories.find(categoryId => categoryId.categoryId == addProductCategory);
 
         return(
             setProduct(
@@ -37,8 +37,8 @@ export const ProductsProvider = ({children}) => {
                     }
                 ]
             )
-        )
-    }
+        );
+    };
 
     return(
         <ProductContext.Provider value={

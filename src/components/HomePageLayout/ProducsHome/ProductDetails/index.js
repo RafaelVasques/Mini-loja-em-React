@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useParams } from "react-router-dom";
+
 import "./style.css";
 
-import { SimilarProducts } from '../../../SimilarProducts.js';
+import { ProductContext } from "../../../contexts/productContext";
 
 import ButtonLink from "../../../Comps-Buttons/ButtonLink";
 import Product from "../Product";
@@ -10,32 +12,43 @@ export default function ProductDetails (){
 
     const buyButtonLinkProperties = {
 		text: 'Comprar',
-		link: '/',
 		styles: 'button button__blue button__buy'
 	};
 
-    const similarProducts = SimilarProducts();
+    const productId = useParams();
+    const products = useContext(ProductContext);
+    const product = products.products.find(product => product.productId == productId.productId);
     
+    const similarProductsHandler = [];
+    products.products.map((item, index) =>{
+
+        if(item.categoryId == product.categoryId){
+            similarProductsHandler.push(
+                <Product
+                    key = {index}
+                    productImgUrl = {item.productImgUrl}
+                    productName = {item.productName}
+                    productPrice = {item.productPrice}
+                    productId = {item.productId}
+                />
+            );
+        };
+        
+    });
+
     return (
         <div>
             <section className="container product__complete-description">
                 <figure className="product__complete-description-wrapper">
                     <div className="product__complete-description-image">
-                        <img src="/images/products_imgs/unsplash_6FDXGY9J6y4_produto.png" alt="Produto XYZ" />
+                        <img src={product.productImgUrl} alt={product.productName} />
                     </div>
                     <div className="product__complete-description-caption">
                         <figcaption>
-                            <h1 className="product__complete-description-name">Produto XYZ</h1>
-                            <p className="product__complete-description-price">R$ 60,00</p>
+                            <h1 className="product__complete-description-name">{product.productName}</h1>
+                            <p className="product__complete-description-price">R$ {product.productPrice}</p>
                             <p className="product__complete-description-description">
-                                Voluptas voluptatum quibusdam similique,
-                                className debitis alias maecenas eveniet ridiculus,
-                                facilis fusce! Ullam conubia? Sociis,
-                                minima malesuada habitasse distinctio sequi aliqua malesuada.
-                                Quisque deleniti proin expedita, aliquid litora.
-                                Iste recusandae? Commodo, quia ridiculus doloribus vero dictum?
-                                Penatibus donec placeat faucibus, dolorum do.
-                                Animi porta anim magnam.
+                                {product.productDescription}
                             </p>
                         </figcaption>
                         <ButtonLink
@@ -52,14 +65,7 @@ export default function ProductDetails (){
                     </div>
                     <div className="products">
                         
-                        {similarProducts.map((item, index) => (
-                            <Product
-                                key = {index}
-                                productImgUrl = {item.productImgUrl}
-                                productName = {item.productName}
-                                productPrice = {item.productPrice}
-                            />
-                        ))}
+                        {similarProductsHandler}
                         
                     </div>
                 </div>

@@ -11,6 +11,7 @@ import './Base.css';
 import HomePageLayout from './components/HomePageLayout';
 import ProductsHome from './components/HomePageLayout/ProducsHome';
 import ProductDetails from './components/HomePageLayout/ProducsHome/ProductDetails';
+import SeeAllProductsCategory from './components/HomePageLayout/ProducsHome/SeeAllProductsCategory';
 import AdminLogin from './components/HomePageLayout/AdminLogin';
 
 import AdminPageLayout from './components/AdminPageLayout';
@@ -32,7 +33,8 @@ export default function App() {
               <Route path='/' element={<HomePageLayout />}>
                 
                 <Route path='/' element={<ProductsHome />}/>
-                <Route path='/product' element={<ProductDetails />}/>
+                <Route path='/product/:productId' element={<ProductDetails />}/>
+                <Route path='/see-all/:categoryId' element={<SeeAllProductsCategory />}/>
                 <Route path='/admin-login' element={<AdminLogin />} />
 
               </Route>

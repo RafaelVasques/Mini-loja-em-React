@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 import "./style.css";
 
 export default function Product (props){
+
+    const navigate = useNavigate();
+	function handleProductDetails() {
+		navigate("/product/" + props.productId);
+	};
 
     return (  
         <div className="product">
@@ -10,7 +17,14 @@ export default function Product (props){
                 <figcaption className="product__informations">
                     <p className="product__description"> {props.productName} </p>
                     <p className="product__price">R$ {props.productPrice} </p>
-                    <a href="/product" className="see__product">Ver produto</a>
+                    <a 
+                        className="see__product"
+                        onClick={ ()=>{
+							handleProductDetails();
+						}}
+                    >
+                        Ver produto
+                    </a>
                 </figcaption>
             </figure>
         </div>
