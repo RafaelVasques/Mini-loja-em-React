@@ -25,6 +25,7 @@
     font-weight: 700;
     font-size: 0.875rem;
     color: var(--blue);
+    cursor: pointer;
 }
 
 .see__more-products-wrapper img {
@@ -38,8 +39,16 @@
     flex-wrap: wrap;
 }
 
-.products > .product:nth-child(4), .product:nth-child(5){
+.products > .product {
     display: none;
+}
+
+.products > 
+    .product:nth-child(1),
+    .product:nth-child(2),
+    .product:nth-child(3),
+    .product:nth-child(4) {
+        display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,7 +67,13 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .products > .product:nth-child(4), .product:nth-child(5) {
+    .products > 
+    .product:nth-child(1),
+    .product:nth-child(2),
+    .product:nth-child(3),
+    .product:nth-child(4),
+    .product:nth-child(5),
+    .product:nth-child(6) {
         display: block;
     }
 }

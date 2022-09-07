@@ -25,6 +25,7 @@
     color: var(--blue);
     margin-top: 8px;
     display: block;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

@@ -20,7 +20,7 @@ export default function AddProduct (){
 
 	const closeAddImagePopupProperties = {
 		text: 'Fechar',
-		styles: 'button__link button__blue'
+		styles: 'button__link button__blue close__add-image-popup'
 	};
 
 	const {
@@ -41,9 +41,9 @@ export default function AddProduct (){
 	function handleSaveNewProduct(e) {
 		
 		if (
-			addProductImage != undefined && addProductCategory != undefined &&
-			addProductName != undefined &&	addProductPrice != undefined &&
-			addProductDescription != undefined
+			addProductImage !== undefined && addProductCategory !== undefined &&
+			addProductName !== undefined &&	addProductPrice !== undefined &&
+			addProductDescription !== undefined
 		){
 			e.preventDefault();
 			saveProduct();

@@ -3,46 +3,6 @@
     position: relative;
 }
 
-.product__image-popup {
-    background-color: rgba(206, 206, 206, 0.63);
-    backdrop-filter: blur(5px);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 25px 150px;
-    align-items: center;
-    flex-direction: column;
-    display: none;
-}
-
-.product__image-popup-header {
-    width: 100%;
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.product__image-popup-header p {
-    font-weight: 700;
-    font-size: 1.375rem;
-    margin-bottom: 16px;
-}
-
-.product__images-popup-wrapper {
-    height: 85%;
-    margin-bottom: 25px;
-}
-
-.product__images-popup-wrapper img{
-    width: 98px;
-    margin: 0 0 12px 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
-}
-
 .add__product-wrapper {
     padding: 16px 0;
 }
@@ -114,8 +74,81 @@
     height: 51px;
 }
 
+.product__image-popup {
+    background-color: rgba(206, 206, 206, 0.63);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px 16px;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.product__image-popup-header {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product__image-popup-header p {
+    font-weight: 700;
+    font-size: 1.375rem;
+}
+
+.close__add-image-popup {
+    min-width: 100px;
+}
+
+.product__images-popup-wrapper {
+    height: 85%;
+    margin-bottom: 25px;
+    overflow-y: scroll;
+}
+
+.product__images-popup-wrapper img{
+    width: calc(33.33333333333333% - 12px);
+    margin: 0 6px 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .product__image-popup {
+        padding: 25px 33px;
+    }
+    
+    .product__images-popup-wrapper img{
+        width: calc(14.28571428571429% - 12px);
+    }
+
+    .close__add-image-popup {
+        min-width: 166px;
+    }
+    
+}
+
 @media screen and (min-width: 1440px) {
     .add__product-wrapper {
         padding: 32px 288.5px;
+    }
+
+    .product__images-popup-wrapper img{
+        width: calc(14.28571428571429% - 12px);
+    }
+
+    .product__image-popup {
+        padding: 25px 152px;
     }
 }

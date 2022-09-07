@@ -43,29 +43,33 @@ export default function SeeAllProductsCategory () {
         
         <div>
             <Banner />
-            <div className="container products__category">
-                <div className="products__category-header">
-                    <p className="products__category-name">
-                        Todos os produtos para {category.categoryName}
-                    </p>
-                    <div className="see__more-products-wrapper">
-                        <a 
-                            className="see__more-products"
-                            onClick={ ()=>{
-                                handleBackToHome();
-                            }}
-                        >
-                            Voltar para a Home
-                        </a>
-                        <img src="/images/arrow.svg" alt="ver tudo"/>
+            <section className="see__all-products-category-area">
+          
+                <div className="container see__all-products-category">
+                    <div className="see__all-products-category-header">
+                        <p className="see__all-products-category-name">
+                            Todos os produtos <br/> para {category.categoryName}
+                        </p>
+                        <div className="back__to-home-wrapper">
+                            <a 
+                                className="back__to-home"
+                                onClick={ ()=>{
+                                    handleBackToHome();
+                                }}
+                            >
+                                Voltar
+                            </a>
+                            <img src="/images/arrow.svg" alt="ver tudo"/>
+                        </div>
+                    </div>
+                    <div className="products">
+                        
+                        {handleProducts}
+                        
                     </div>
                 </div>
-                <div className="products">
-                    
-                    {handleProducts}
-                    
-                </div>
-            </div>
+
+            </section>
         </div>
  
     );
