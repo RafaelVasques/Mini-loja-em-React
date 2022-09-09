@@ -18,7 +18,7 @@ export default function AdminProducts () {
 	const { products } = useContext(ProductContext);
 		
 	const navigate = useNavigate();
-	function handleAddProductClick(event) {
+	function handleAddProductClick() {
 		navigate("add-product");
 	};
 
@@ -33,7 +33,6 @@ export default function AdminProducts () {
 							handleAddProductClick();
 						}}
 					/>
-
 				</div>
 				<div className="admin__products">
 
@@ -44,6 +43,7 @@ export default function AdminProducts () {
 							productName = {item.productName}
 							productPrice = {item.productPrice}
 							productCode = {item.productCode}
+							productId = {item.productId}
 						/>
 					))}
 

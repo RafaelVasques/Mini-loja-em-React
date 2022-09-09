@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import "./style.css";
 
@@ -11,20 +11,28 @@ import { Categories } from '../../../Categories';
 import Button from "../../../Comps-Buttons/Button";
 import ButtonLink from '../../../Comps-Buttons/ButtonLink';
 
-export default function AddProduct (){
-    
-	const addProductButtonProperties = {
-		text: 'Adicionar Produto',
-		styles: 'button button__blue add__product-button'
+export default function EditProduct (){
+
+	const navigate = useNavigate();
+
+	const saveEditedProductButtonProperties = {
+		text: 'Salvar Edição',
+		styles: 'button button__blue edit__product-button'
+	};
+
+	const cancelEditedProductButtonProperties = {
+		text: 'Cancelar Edição',
+		styles: 'button button__blue edit__product-button'
 	};
 
 	const closeAddImagePopupProperties = {
 		text: 'Fechar',
 		styles: 'button__link button__blue close__add-image-popup'
 	};
-
+	
 	const {
-		saveProduct,
+		products,
+		saveEditedProduct,
 		addProductImage,
 		setAddProductImage,
 		addProductCategory,
@@ -37,16 +45,30 @@ export default function AddProduct (){
 		setAddProductDescription
 	} = useContext(ProductContext);
 
-	const navigate = useNavigate();
-	function handleSaveNewProduct(e) {
-		
+	const { productId } = useParams();
+	const product = products.find(product => product.productId == productId);
+	
+	if(
+		addProductImage == undefined && addProductCategory == undefined &&
+		addProductName == undefined &&	addProductPrice == undefined &&
+		addProductDescription == undefined
+	){
+		setAddProductImage(product.productImgUrl);
+		setAddProductCategory(product.categoryId);
+		setAddProductName(product.productName);
+		setAddProductPrice(product.productPrice);
+		setAddProductDescription(product.productDescription);
+	}
+
+	function handleSaveEditedProduct(e) {
+			
 		if (
 			addProductImage !== undefined && addProductCategory !== undefined &&
 			addProductName !== undefined &&	addProductPrice !== undefined &&
 			addProductDescription !== undefined
 		){
 			e.preventDefault();
-			saveProduct();
+			saveEditedProduct(productId);
 
 			setAddProductImage(undefined);
 			setAddProductCategory(undefined);
@@ -55,8 +77,13 @@ export default function AddProduct (){
 			setAddProductDescription(undefined);
 
 			navigate("/admin");
-		}
+		};
 		
+	};
+
+	function handleCancelEditProduct(e) {	
+		e.preventDefault();
+		navigate("/admin");
 	};
 
 	function handleProductImagePopup() {
@@ -74,30 +101,34 @@ export default function AddProduct (){
 
 	return (
 
-        <section className="container add__product-area">
+        <section className="container edit__product-area">
 			
-			<div className="add__product-wrapper">
-				<p>Adicionar novo produto</p>
-				<form className="add__product-form" action="/admin" id="add__product-form">
+			<div className="edit__product-wrapper">
+				<p>Editar {product.productName}</p>
+				<form
+					className="edit__product-form"
+					onSubmit={ (...e) => {
+						handleSaveEditedProduct(...e);
+					}}
+					id="edit__product-form"
+				>
 								
-					<div className="text__box add__product-input-wrapper">
+					<div className="text__box edit__product-input-wrapper">
 						<label htmlFor="image__URL">URL da imagem</label>
 						<input 
 							id="image__URL"
 							type="text"
 							className="image__URL-input"
-							value={addProductImage}
+							defaultValue={addProductImage}
 							required
 							autoComplete="off"
 							onClick={() => {
 								handleProductImagePopup();
 							}}
-
 						/>
-
 					</div>
 
-					<div className="text__box add__product-input-wrapper">
+					<div className="text__box edit__product-input-wrapper">
 						<label htmlFor="category">Categoria</label>
 						<select 
 							name="categories"
@@ -112,6 +143,7 @@ export default function AddProduct (){
 								<option
 									key={index}
 									value={item.categoryId}
+									selected={item.categoryId == product.categoryId ? 'selected' : ''}
 								>
 									{item.categoryName}
 								</option>
@@ -119,34 +151,36 @@ export default function AddProduct (){
 						</select>
 					</div>
 
-					<div className="text__box add__product-input-wrapper">
+					<div className="text__box edit__product-input-wrapper">
 						<label htmlFor="product__name">Nome do produto</label>
 						<input
 							id="product__name"
 							type="text"
+							defaultValue={product.productName}
 							value={addProductName}
 							onChange={(event) => setAddProductName(event.target.value)}
 							required
 						/>
 					</div>
 
-					<div className="text__box add__product-input-wrapper">
+					<div className="text__box edit__product-input-wrapper">
 						<label htmlFor="product__price">Preço do produto</label>
 						<input
 							id="product__price"
 							type="number"
-							value={addProductPrice}
+							defaultValue={parseFloat(product.productPrice)}
 							onChange={(event) => setAddProductPrice(event.target.value)}
 							required
 						/>
 					</div>
 
-					<div className="text__box add__product-textarea-wrapper">
+					<div className="text__box edit__product-textarea-wrapper">
 						<label htmlFor="product__description">Descrição do produto</label>
 						<textarea
 							id="product__description"
 							rols="30"
 							rows="10"
+							defaultValue={product.productDescription}
 							value={addProductDescription}
 							onChange={(event) => setAddProductDescription(event.target.value)}
 							required
@@ -154,13 +188,19 @@ export default function AddProduct (){
 					</div>
 
 					<Button
-						properties = {addProductButtonProperties}
-						onClick={ (...e)=>{
-							handleSaveNewProduct(...e);
-						}}
+						properties = {saveEditedProductButtonProperties}
 					/>
 
 				</form>
+
+				<br/>
+
+				<Button
+						properties = {cancelEditedProductButtonProperties}
+						onClick={ (...e) => {
+							handleCancelEditProduct(...e);
+						}}
+				/>
 			</div>
 
 			<div className="product__image-popup">
@@ -169,7 +209,7 @@ export default function AddProduct (){
 					<p>Selecione uma imagem</p>
 					<ButtonLink
 						properties = {closeAddImagePopupProperties}
-						onClick={ ()=>{
+						onClick={ () => {
 							handleCloseProductImagePopup();
 						}}
 					/>

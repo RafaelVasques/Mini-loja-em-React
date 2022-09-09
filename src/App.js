@@ -17,6 +17,7 @@ import AdminLogin from './components/HomePageLayout/AdminLogin';
 import AdminPageLayout from './components/AdminPageLayout';
 import AdminProducts from './components/AdminPageLayout/AdminProducts';
 import AddProduct from './components/AdminPageLayout/AdminProducts/AddProduct';
+import EditProduct from './components/AdminPageLayout/AdminProducts/EditProduct';
 
 import ContactUs from './components/Comps-Footer/ContactUs';
 import Footer from './components/Comps-Footer/Footer';
@@ -30,21 +31,23 @@ export default function App() {
         <ProductsProvider>
           <Routes>
 
-              <Route path='/' element={<HomePageLayout />}>
-                
-                <Route path='/' element={<ProductsHome />}/>
-                <Route path='/product/:productId' element={<ProductDetails />}/>
-                <Route path='/see-all/:categoryId' element={<SeeAllProductsCategory />}/>
-                <Route path='/admin-login' element={<AdminLogin />} />
+            <Route path='/' element={<HomePageLayout />}>
+              
+              <Route path='/' element={<ProductsHome />}/>
+              <Route path='/product/:productId' element={<ProductDetails />}/>
+              <Route path='/see-all/:categoryId' element={<SeeAllProductsCategory />}/>
+              <Route path='/admin-login' element={<AdminLogin />} />
 
-              </Route>
+            </Route>
 
             <Route path='/admin' element={<AdminPageLayout />}>
                 
-                <Route path='/admin' element={<AdminProducts />}/>
-                <Route path='/admin/add-product' element={<AddProduct />}/>
+              <Route path='/admin' element={<AdminProducts />}/>
+              <Route path='/admin/add-product' element={<AddProduct />}/>
+              <Route path='/admin/edit-product/:productId' element={<EditProduct />}/>
 
             </Route>
+
           </Routes>
         </ProductsProvider>
       </BrowserRouter>

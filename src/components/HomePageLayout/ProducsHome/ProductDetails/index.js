@@ -16,11 +16,11 @@ export default function ProductDetails (){
 	};
 
     const productId = useParams();
-    const products = useContext(ProductContext);
-    const product = products.products.find(product => product.productId == productId.productId);
+    const { products } = useContext(ProductContext);
+    const product = products.find(product => product.productId == productId.productId);
     
     const similarProductsHandler = [];
-    products.products.map((item, index) =>{
+    products.map((item, index) =>{
 
         if(item.categoryId == product.categoryId){
             similarProductsHandler.push(

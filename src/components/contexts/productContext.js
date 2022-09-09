@@ -17,10 +17,8 @@ export const ProductsProvider = ({children}) => {
 
     const categories = Categories();
     
-    const saveProduct = () => {
-        
-        const category = categories.find(categoryId => categoryId.categoryId == addProductCategory);
-
+    const saveProduct = () => {    
+        const category = categories.find(category => category.categoryId == addProductCategory);
         return(
             setProduct(
                 [
@@ -40,11 +38,38 @@ export const ProductsProvider = ({children}) => {
         );
     };
 
+    let productUpdated = [];
+    let productsUpdated = [];
+    const saveEditedProduct = (productId) => {
+
+        const category = categories.find(category => category.categoryId == addProductCategory);
+        
+        products.map(product => {
+            
+            if(productId == product.productId){               
+                productUpdated = {
+                    productId: productId,
+                    productName: addProductName,
+                    productImgUrl: addProductImage,
+                    productPrice: addProductPrice,
+                    productDescription: addProductDescription,
+                    categoryId: addProductCategory,
+                    productCategory: category.categoryName
+                };
+                productsUpdated.push(productUpdated);
+            }else{
+                productsUpdated.push(product);
+            };
+
+        });
+    };
+
     return(
         <ProductContext.Provider value={
             {
                 products,
                 saveProduct,
+                saveEditedProduct,
                 addProductImage,
                 setAddProductImage,
                 addProductCategory,
