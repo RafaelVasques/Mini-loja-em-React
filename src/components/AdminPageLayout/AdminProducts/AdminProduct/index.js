@@ -33,14 +33,14 @@ export default function AdminProduct (props){
 		element[0].style.display = 'flex';
 	};
 
-    function declineProductDelete() {
+    function handledeclineProductDelete() {
 		const element = document.getElementsByClassName(productDeleteConfirmationBoxId);
 		element[0].style.display = 'none';
 	};
 
     const { products, setProduct } = useContext(ProductContext);
     function handleExcludeProduct() {
-		const newProductsArray = products.filter(product => product.productId != props.productId);
+		const newProductsArray = products.filter(product => product.productId != props.productId);    
         setProduct(newProductsArray);
         const element = document.getElementsByClassName(productDeleteConfirmationBoxId);
 		element[0].style.display = 'none';
@@ -87,7 +87,7 @@ export default function AdminProduct (props){
                 <ButtonLink
                     properties = {declineExcludeProductButtonLinkProperties}
                     onClick={ ()=> {
-                        declineProductDelete();
+                        handledeclineProductDelete();
                     }}
                 />
 

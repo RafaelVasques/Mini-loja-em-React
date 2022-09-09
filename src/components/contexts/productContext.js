@@ -43,7 +43,7 @@ export const ProductsProvider = ({children}) => {
     const saveEditedProduct = (productId) => {
 
         const category = categories.find(category => category.categoryId == addProductCategory);
-        
+
         products.map(product => {
             
             if(productId == product.productId){               
@@ -62,12 +62,14 @@ export const ProductsProvider = ({children}) => {
             };
 
         });
+        setProduct(productsUpdated)
     };
 
     return(
         <ProductContext.Provider value={
             {
                 products,
+                setProduct,
                 saveProduct,
                 saveEditedProduct,
                 addProductImage,

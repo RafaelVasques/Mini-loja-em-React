@@ -61,7 +61,7 @@ export default function EditProduct (){
 	}
 
 	function handleSaveEditedProduct(e) {
-			
+		
 		if (
 			addProductImage !== undefined && addProductCategory !== undefined &&
 			addProductName !== undefined &&	addProductPrice !== undefined &&
@@ -107,10 +107,10 @@ export default function EditProduct (){
 				<p>Editar {product.productName}</p>
 				<form
 					className="edit__product-form"
+					id="edit__product-form"
 					onSubmit={ (...e) => {
 						handleSaveEditedProduct(...e);
 					}}
-					id="edit__product-form"
 				>
 								
 					<div className="text__box edit__product-input-wrapper">
@@ -196,10 +196,10 @@ export default function EditProduct (){
 				<br/>
 
 				<Button
-						properties = {cancelEditedProductButtonProperties}
-						onClick={ (...e) => {
-							handleCancelEditProduct(...e);
-						}}
+					properties = {cancelEditedProductButtonProperties}
+					onClick={ (...e) => {
+						handleCancelEditProduct(...e);
+					}}
 				/>
 			</div>
 
