@@ -1,0 +1,14 @@
+.Page404 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 53px;
+    text-align: center;
+    padding: 100px;
+    color: var(--black);
+    background-color: var(--bg-products);
+}

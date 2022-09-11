@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import { ProductsProvider } from './components/contexts/productContext';
 
@@ -21,12 +21,12 @@ import EditProduct from './components/AdminPageLayout/AdminProducts/EditProduct'
 
 import ContactUs from './components/Comps-Footer/ContactUs';
 import Footer from './components/Comps-Footer/Footer';
+import Page404 from './components/Page404';
 
 export default function App() {
 
   return (
-    <div>
-      
+    <div>  
       <BrowserRouter >
         <ProductsProvider>
           <Routes>
@@ -37,6 +37,7 @@ export default function App() {
               <Route path='/product/:productId' element={<ProductDetails />}/>
               <Route path='/see-all/:categoryId' element={<SeeAllProductsCategory />}/>
               <Route path='/admin-login' element={<AdminLogin />} />
+              <Route path='*' element={<Page404/>} />
 
             </Route>
 
@@ -45,6 +46,7 @@ export default function App() {
               <Route path='/admin' element={<AdminProducts />}/>
               <Route path='/admin/add-product' element={<AddProduct />}/>
               <Route path='/admin/edit-product/:productId' element={<EditProduct />}/>
+              <Route path='*' element={<Page404/>} />
 
             </Route>
 
