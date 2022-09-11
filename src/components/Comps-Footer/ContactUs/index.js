@@ -32,12 +32,12 @@ export default function ContactUs (){
 				<p className="contact__us-title">Fale conosco</p>
 				<form action="" id="contact__us-form">
 					<div className="text__box contact__us-name-wrapper">
-						<label>Nome</label>
-						<input type="text" />
+						<label htmlFor="contact__us-name">Nome</label>
+						<input type="text" id="contact__us-name"/>
 					</div>
 					<div className="text__box contact__us-message-wrapper">
-						<label>Escreva sua mensagem</label>
-						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<label htmlFor="contact__us-message">Escreva sua mensagem</label>
+						<textarea id="contact__us-message" cols="30" rows="10"></textarea>
 					</div>
 					<Button 
 						properties = {contactButtonProperties}
