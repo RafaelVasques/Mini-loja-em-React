@@ -1,3 +1,7 @@
+# Sobre este projeto
+
+Projeto de estudo front-end do desafio Alura. O estudo consiste em ler e entender o briefing de um cliente fictício, desenvolver um layout web pré-estabelecido e fornecido no Figma, e organizar o fluxo de trabalho com o Trello. Layout estruturado com React, Javascript HTML e CSS. Neste projeto foi utilizado alguns Hooks como o Browser Router, Use Navigate, Use State e Context API.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
